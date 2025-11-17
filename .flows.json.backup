@@ -534,7 +534,7 @@
         "y": 100,
         "wires": [
             [
-                "52e8f866bcae20a2"
+                "cd35fc6f4ef91b2f"
             ]
         ]
     },
@@ -548,6 +548,19 @@
         "wires": [
             [
                 "324c5340dc0dfb15"
+            ]
+        ]
+    },
+    {
+        "id": "cd35fc6f4ef91b2f",
+        "type": "move to red cap 3",
+        "z": "aeae891cb14daa67",
+        "name": "",
+        "x": 550,
+        "y": 160,
+        "wires": [
+            [
+                "bebe20b58255a150"
             ]
         ]
     },
@@ -756,19 +769,6 @@
         "wires": [
             [
                 "f88778b80e6c4503"
-            ]
-        ]
-    },
-    {
-        "id": "52e8f866bcae20a2",
-        "type": "move to red cap 2",
-        "z": "aeae891cb14daa67",
-        "name": "",
-        "x": 550,
-        "y": 160,
-        "wires": [
-            [
-                "bebe20b58255a150"
             ]
         ]
     },

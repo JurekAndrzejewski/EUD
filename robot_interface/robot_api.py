@@ -546,10 +546,10 @@ class RobotAPI:
         """
         try:
             def _reset_free_body(body_name, pos_xyz):
-                if body_name == 'red_cap' or body_name == 'red_box':
-                    print("Resetting red_cap and green_cap")
-                    mujoco.mj_resetData(self.model, self.data)
-                    return  
+                if body_name == 'red_cap':
+                    body_id = 1
+                if body_name == 'green_cap':
+                    body_id = 2
                 else:
                     body_id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_BODY, body_name)
                 # First joint for this body
@@ -571,13 +571,18 @@ class RobotAPI:
                 self.data.qvel[qvel_adr:qvel_adr+6] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
             with self.data_lock:
-                _reset_free_body("red_cap", [-0.4125, 0.125, 0.565125])
-                _reset_free_body("green_cap", [0.4125, 0.125, 0.565125])
+                _reset_free_body("red_cap1", [-0.4125, 0.325, 0.56125])
+                _reset_free_body("green_cap1", [0.4125, 0.325, 0.565125])
+                _reset_free_body("red_cap2", [-0.4125, 0.125, 0.56125])
+                _reset_free_body("green_cap2", [0.4125, 0.125, 0.565125])
+                _reset_free_body("red_cap3", [-0.4125, -0.125, 0.56125])
+                _reset_free_body("green_cap3", [0.4125, -0.125, 0.565125])
                 # Recompute all dependent quantities
                 mujoco.mj_forward(self.model, self.data)
 
             return {"status": "success", "message": "red_box and blue_box reset"}
         except Exception as e:
+            print({"status": "error", "message": str(e)})
             return {"status": "error", "message": str(e)}
 
     def step_simulation(self):

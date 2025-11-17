@@ -12,6 +12,7 @@ class MoveToPositionAction(BaseModel):
     action: Literal["move_to_position"] = "move_to_position"
     position: Position
     duration: Optional[float] = Field(default=2.0, description="Movement duration in seconds")
+    name: Optional[str] = Field(default=None, description="Optional name")
 
 class MoveToObjectAction(BaseModel):
     """Move robot above an object"""

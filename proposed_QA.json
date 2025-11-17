@@ -1,0 +1,54 @@
+[
+  {
+    "question": "Why did the robot not pick up the first red cap?",
+    "answer": "The flow might not include a correct 'move to red cap 1' + 'grasp' sequence. Check that both actions are present and positioned before moving to the red bucket."
+  },
+  {
+    "question": "Why did the robot skip one or more red caps?",
+    "answer": "Verify that all three red cap blocks exist in order: move -> grasp -> move to bucket -> release. Missing or misplaced blocks will cause skipping."
+  },
+  {
+    "question": "Why did the robot release a cap without grabbing it?",
+    "answer": "A grasp step may be missing or placed after moving to the bucket. Ensure 'grasp' always occurs immediately after 'move to cap'."
+  },
+  {
+    "question": "Why did the robot place a cap into the wrong bucket?",
+    "answer": "The move target after grasp may be wrong. Red caps must be moved to the red bucket and green caps to the green bucket."
+  },
+  {
+    "question": "Why did the robot stop before finishing the green caps?",
+    "answer": "The 'finish' node appears too early. It must only be placed after the last green cap release."
+  },
+  {
+    "question": "Why is the last cap not processed?",
+    "answer": "The sequence may end prematurely. Ensure the final cap has all four steps: move → grasp → move to bucket → release."
+  },
+  {
+    "question": "Why did the robot move to a position instead of placing into the bucket?",
+    "answer": "The flow for one red cap uses 'move to position' instead of 'move to red bucket'. Replace it with the correct bucket target."
+  },
+  {
+    "question": "Why did the robot attempt to pick up the same cap twice?",
+    "answer": "Ensure that each cycle looks like this move -> grasp -> move to bucket -> release."
+  },
+  {
+    "question": "Why did the robot perform actions out of order?",
+    "answer": "Nodes may be dragged in the wrong sequence. Check that each cap uses: move → grasp → move to bucket → release in that exact order."
+  },
+  {
+    "question": "Why was the robot holding a cap when it should have been empty?",
+    "answer": "A release step may be missing or misaligned. Verify that every take operation is followed by a release before starting a new one."
+  },
+  {
+    "question": "Why did the robot move to the correct cap but skip the grasp command?",
+    "answer": "Confirm the grasp node is connected and active."
+  },
+  {
+    "question": "Why did the robot knock over caps or collide with objects?",
+    "answer": "Movement paths may not include safe clearance points. Add intermediate path nodes to avoid straight-line collisions."
+  },
+  {
+    "question": "Why is the robot not resetting properly before starting?",
+    "answer": "Ensure reset boxes node happens first after the start node."
+  }
+]

@@ -1,15 +1,18 @@
 <script type="text/javascript">
-RED.nodes.registerType('finish', {
+RED.nodes.registerType('move to green bucket', {
     category: 'robot',
     color: '#A6BBCF',
-    defaults: { name: { value: "" } },
+    defaults: {
+        name: { value: "" },
+    },
     inputs: 1,
     outputs: 1,
     
-    label: function() { return "finish"; }
+    label: function() { return "move to green bucket"; }
 });
 </script>
-<script type="text/html" data-template-name="finish">
+
+<script type="text/html" data-template-name="move to green bucket">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name">

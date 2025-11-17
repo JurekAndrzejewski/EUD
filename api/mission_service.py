@@ -107,7 +107,10 @@ async def execute_mission(mission: Mission):
         mission_steps = []
         for i, action in enumerate(mission.actions):
             step_start_time = time.time()
-            print(f"Executing action {i+1}/{len(mission.actions)}: {action.action}")
+            try:
+                print(f"Executing action {i+1}/{len(mission.actions)}: {action.action} {action.position} {action.name}")
+            except:
+                print(f"Executing action {i+1}/{len(mission.actions)}: {action.action}")
             
             # Execute the action
             result = await execute_action(action)
@@ -125,6 +128,7 @@ async def execute_mission(mission: Mission):
             
             # Check if action failed
             if result["status"] == "error":
+                print(f"Action {i+1} failed: {result['message']}")
                 return MissionResponse(
                     status="error",
                     message=f"Action {i+1} failed: {result['message']}",
@@ -151,6 +155,7 @@ async def execute_mission(mission: Mission):
         )
         
     except Exception as e:
+        print(e)
         return MissionResponse(
             status="error",
             message=f"Mission execution failed: {str(e)}",
