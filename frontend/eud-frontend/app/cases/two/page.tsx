@@ -15,7 +15,7 @@ export default function Home() {
   const handleClick = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://127.0.0.1:1880/info");
+      const res = await fetch("http://127.0.0.1:1880/case3");
       const data = await res.text();
       setMessage(data);
     } catch (err) {
@@ -28,13 +28,15 @@ export default function Home() {
   return (
     <>
       <header className="w-full flex justify-center bg-indigo-600 shadow-md py-4 fixed top-0 left-0 z-50">
+
         <nav className="flex space-x-6 text-lg font-medium">
-          <Link href="/" className="font-bold underline hover:text-blue-600 transition">Home</Link>
+          <Link href="/" className="hover:text-blue-600 transition">Home</Link>
           <Link href="/cases/one" className="hover:text-blue-600 transition">Case 1</Link>
-          <Link href="/cases/two" className="hover:text-blue-600 transition">Case 2</Link>
+          <Link href="/cases/two" className="font-bold underline hover:text-blue-600 transition">Case 2</Link>
           <Link href="/cases/three" className="hover:text-blue-600 transition">Case 3</Link>
         </nav>
       </header>
+
 
       <main className="pt-24 min-h-screen bg-blue-100 flex items-center justify-center">
         <div className="p-6 rounded-2xl shadow-lg bg-white w-96 text-center space-y-6">

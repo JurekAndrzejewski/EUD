@@ -400,6 +400,55 @@
         ]
     },
     {
+        "id": "96913925966ae7a7",
+        "type": "http in",
+        "z": "d103939ecea1f50a",
+        "name": "run case 1",
+        "url": "/case1",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "9eb5dc55519d3d3f",
+                "f557dcf18226a95e"
+            ]
+        ]
+    },
+    {
+        "id": "f557dcf18226a95e",
+        "type": "template",
+        "z": "d103939ecea1f50a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "8943983394ef9d33"
+            ]
+        ]
+    },
+    {
+        "id": "8943983394ef9d33",
+        "type": "http response",
+        "z": "d103939ecea1f50a",
+        "name": "response",
+        "statusCode": "200",
+        "headers": {},
+        "x": 120,
+        "y": 300,
+        "wires": []
+    },
+    {
         "id": "06bd2c3bfd8af3cc",
         "type": "initialize",
         "z": "aeae891cb14daa67",
@@ -534,7 +583,7 @@
         "y": 100,
         "wires": [
             [
-                "cd35fc6f4ef91b2f"
+                "52e8f866bcae20a2"
             ]
         ]
     },
@@ -548,19 +597,6 @@
         "wires": [
             [
                 "324c5340dc0dfb15"
-            ]
-        ]
-    },
-    {
-        "id": "cd35fc6f4ef91b2f",
-        "type": "move to red cap 3",
-        "z": "aeae891cb14daa67",
-        "name": "",
-        "x": 550,
-        "y": 160,
-        "wires": [
-            [
-                "bebe20b58255a150"
             ]
         ]
     },
@@ -769,6 +805,19 @@
         "wires": [
             [
                 "f88778b80e6c4503"
+            ]
+        ]
+    },
+    {
+        "id": "52e8f866bcae20a2",
+        "type": "move to red cap 2",
+        "z": "aeae891cb14daa67",
+        "name": "",
+        "x": 550,
+        "y": 160,
+        "wires": [
+            [
+                "bebe20b58255a150"
             ]
         ]
     },
