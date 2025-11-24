@@ -43,7 +43,7 @@ export default function Home() {
             onClick={handleClick}
             className="px-4 py-2 rounded-2xl shadow bg-blue-500 text-white hover:bg-blue-600 transition w-full"
           >
-            {loading ? "Loading..." : "Query Node-RED"}
+            {loading ? "Loading..." : "Run Simulation and guide"}
           </button>
 
           {message && (
@@ -60,11 +60,11 @@ export default function Home() {
                   onClick={() => setOpen1(!open1)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 1
+                  "why" questions will appear here
                 </button>
                 {open1 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 1.
+                    And will provide insight into what potential issues are present in the simulation
                   </div>
                 )}
               </div>
@@ -74,11 +74,11 @@ export default function Home() {
                   onClick={() => setOpen2(!open2)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 2
+                  Why did it not work?
                 </button>
                 {open2 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 2.
+                    Verify that an expected action exists
                   </div>
                 )}
               </div>

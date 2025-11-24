@@ -43,7 +43,7 @@ export default function Home() {
             onClick={handleClick}
             className="px-4 py-2 rounded-2xl shadow bg-blue-500 text-white hover:bg-blue-600 transition w-full"
           >
-            {loading ? "Loading..." : "Query Node-RED"}
+            {loading ? "Loading..." : "Start Robot Flow"}
           </button>
 
           {message && (
@@ -60,11 +60,11 @@ export default function Home() {
                   onClick={() => setOpen1(!open1)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 1
+                  Why did the robot not pick up the second red cap?
                 </button>
                 {open1 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 1.
+                    The flow might not include a correct 'move to red cap 2' + 'grasp' sequence. Check that both actions are present and positioned before moving to the red bucket.
                   </div>
                 )}
               </div>
@@ -74,28 +74,16 @@ export default function Home() {
                   onClick={() => setOpen2(!open2)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 2
+                  Why did the robot skip one or more red caps?
                 </button>
                 {open2 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 2.
+                    Verify that all three red cap blocks exist in order: move - grasp - move to bucket - release. Missing or misplaced blocks will cause skipping.
                   </div>
                 )}
               </div>
 
-              <div>
-                <button
-                  onClick={() => setOpen3(!open3)}
-                  className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
-                >
-                  Placeholder 3
-                </button>
-                {open3 && (
-                  <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 3.
-                  </div>
-                )}
-              </div>
+  
             </div>
           </div>
         </div>

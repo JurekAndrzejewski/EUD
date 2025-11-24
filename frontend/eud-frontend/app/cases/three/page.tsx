@@ -15,7 +15,7 @@ export default function Home() {
   const handleClick = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://127.0.0.1:1880/case2");
+      const res = await fetch("http://127.0.0.1:1880/case3");
       const data = await res.text();
       setMessage(data);
     } catch (err) {
@@ -43,7 +43,7 @@ export default function Home() {
             onClick={handleClick}
             className="px-4 py-2 rounded-2xl shadow bg-blue-500 text-white hover:bg-blue-600 transition w-full"
           >
-            {loading ? "Loading..." : "Query Node-RED"}
+            {loading ? "Loading..." : "Start Robot Flow"}
           </button>
 
           {message && (
@@ -60,11 +60,11 @@ export default function Home() {
                   onClick={() => setOpen1(!open1)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 1
+                  hy did the robot move to a position instead of placing into the bucket?
                 </button>
                 {open1 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 1.
+                    The flow for one red cap uses 'move to position' instead of 'move to red bucket'. Replace it with the correct bucket target.
                   </div>
                 )}
               </div>
@@ -74,11 +74,11 @@ export default function Home() {
                   onClick={() => setOpen2(!open2)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 2
+                  Why is a there 2 red caps in the red bucket?
                 </button>
                 {open2 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 2.
+                    Check and ensure that arm grasps and releases at the correct location
                   </div>
                 )}
               </div>

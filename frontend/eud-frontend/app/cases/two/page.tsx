@@ -15,7 +15,7 @@ export default function Home() {
   const handleClick = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://127.0.0.1:1880/case3");
+      const res = await fetch("http://127.0.0.1:1880/case2");
       const data = await res.text();
       setMessage(data);
     } catch (err) {
@@ -45,7 +45,7 @@ export default function Home() {
             onClick={handleClick}
             className="px-4 py-2 rounded-2xl shadow bg-blue-500 text-white hover:bg-blue-600 transition w-full"
           >
-            {loading ? "Loading..." : "Query Node-RED"}
+            {loading ? "Loading..." : "Start Robot Flow"}
           </button>
 
           {message && (
@@ -62,11 +62,11 @@ export default function Home() {
                   onClick={() => setOpen1(!open1)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 1
+                  Why did the robot place a cap into the wrong bucket?
                 </button>
                 {open1 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 1.
+                    The move target after grasp may be wrong. Ensure that grasped object and release target corellate
                   </div>
                 )}
               </div>
@@ -76,11 +76,11 @@ export default function Home() {
                   onClick={() => setOpen2(!open2)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 2
+                  Why did the robot stop before finishing the green caps?
                 </button>
                 {open2 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 2.
+                    Ensure that flow reaches through all blocks, and doesn't finish earlier than expected.
                   </div>
                 )}
               </div>
@@ -90,11 +90,11 @@ export default function Home() {
                   onClick={() => setOpen3(!open3)}
                   className="w-full px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
                 >
-                  Placeholder 3
+                  Why is the last cap not processed?
                 </button>
                 {open3 && (
                   <div className="mt-2 p-3 bg-blue-400 rounded-xl">
-                    Placeholder text content for section 3.
+                    The sequence may end prematurely. Ensure the final cap has all four steps: move → grasp → move to bucket → release
                   </div>
                 )}
               </div>
