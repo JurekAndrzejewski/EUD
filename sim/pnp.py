@@ -157,6 +157,8 @@ def init() -> tuple[mj.MjModel, mj.MjData]:
 
 # Initialize the simulation
 model, data = init()
+print(model, data)
+print(model.opt.timestep)
 
 # Robot configuration
 # Home position: joints at specific angles (in radians) for "home" pose
