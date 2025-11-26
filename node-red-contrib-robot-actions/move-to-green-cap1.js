@@ -5,11 +5,11 @@ module.exports = function(RED) {
         node.on('input', function(msg) {
             const flow = node.context().flow;
             const actions = flow.get('actions') || [];
-            const action3 = {"action":"move_to_position","position":{"x_coord": 0,"y_coord": 0.7,"z_coord": 0.85},"duration": 2, "name": "middle"};
+            const action3 = {"action":"move_to_position","position":{"x_coord": 0,"y_coord": 0.7,"z_coord": 0.85},"duration": 2, "name": "green_middle"};
             actions.push(action3);
-            const action = {"action":"move_to_position","position":{"x_coord": 0.4325,"y_coord": 0.345,"z_coord": 0.665},"duration": 2, "name": "green_cap1_1"};
+            const action = {"action":"move_to_position","position":{"x_coord": 0.4325,"y_coord": 0.345,"z_coord": 0.665},"duration": 2, "name": "green_cap"};
             actions.push(action);
-            const action2 = {"action":"move_to_position","position":{"x_coord": 0.4325,"y_coord": 0.345,"z_coord": 0.625},"duration": 1, "name": "green_cap1_2"};
+            const action2 = {"action":"move_to_position","position":{"x_coord": 0.4325,"y_coord": 0.345,"z_coord": 0.625},"duration": 1, "name": "green_cap"};
             actions.push(action2);
             flow.set('actions', actions);
             msg.payload = actions;

@@ -5,7 +5,7 @@ module.exports = function(RED) {
         node.on('input', function(msg) {
             const flow = node.context().flow;
             const actions = [];
-            const action = {"action": "initialize"};
+            const action = {"action": "initialize", "name": "initialize"};
             actions.push(action);
             flow.set('actions', actions);
             msg.payload = actions;

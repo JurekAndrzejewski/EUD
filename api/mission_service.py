@@ -79,7 +79,8 @@ async def execute_action(action: RobotAction) -> Dict[str, Any]:
             
         elif action.action == "wait":
             result = robot.wait(action.seconds)
-            
+        else:
+            result = {"status": "error", "message": f"Unknown action: {action.action}"}
         return result
         
     except Exception as e:

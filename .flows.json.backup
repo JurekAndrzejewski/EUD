@@ -427,7 +427,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
+        "template": "Simulation executed",
         "output": "str",
         "x": 100,
         "y": 240,

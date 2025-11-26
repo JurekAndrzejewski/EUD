@@ -10,10 +10,11 @@ module.exports = function(RED) {
             if (actions.length >= 2) {
                 const oneToLast = actions[actions.length - 2]; // second last action
 
-                if (oneToLast.action === "move_to_position") {
+                if (oneToLast.action === "move_to_position" && oneToLast.name !== "red_cap") {
                     const x = parseFloat(oneToLast.position.x_coord);
                     const y = parseFloat(oneToLast.position.y_coord);
                     const z = parseFloat(oneToLast.position.z_coord);
+                    const name = oneToLast.name;
 
                     // New action with z + 0.04
                     const newAction = {
@@ -23,7 +24,8 @@ module.exports = function(RED) {
                             y_coord: y.toString(),
                             z_coord: (z + 0.04).toString()
                         },
-                        duration: oneToLast.duration
+                        duration: oneToLast.duration,
+                        name: name
                     };
 
                     // Push AFTER the last action

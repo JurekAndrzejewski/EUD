@@ -7,6 +7,8 @@ module.exports = function(RED) {
             const flow = node.context().flow;
             const actions = flow.get('actions') || [];
 
+            const flowName = config.flowName || "default_flow";
+
             // Convert position fields to simple x, y, z numbers
             const normalizedActions = actions.map(a => {
                 if (a.position) {
@@ -23,7 +25,7 @@ module.exports = function(RED) {
                 return a;
             });
 
-            const mission = { missions: [{ mission_id: "mission_1", actions: normalizedActions }] };
+            const mission = { missions: [{ mission_id: flowName, actions: normalizedActions }] };
 
             console.log("Mission JSON being sent:");
             console.log(JSON.stringify(mission, null, 2));

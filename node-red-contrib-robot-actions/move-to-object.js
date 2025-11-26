@@ -5,7 +5,7 @@ module.exports = function(RED) {
         node.on('input', function(msg) {
             const flow = node.context().flow;
             const actions = flow.get('actions') || [];
-            const action = {"action":"move_to_object","object_name":config.object_name,"height_offset":config.height_offset};
+            const action = {"action":"move_to_object","object_name":config.object_name,"height_offset":config.height_offset, "name": "move_to_object"};
             actions.push(action);
             flow.set('actions', actions);
             msg.payload = actions;
