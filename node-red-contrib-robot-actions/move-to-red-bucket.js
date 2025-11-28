@@ -10,7 +10,7 @@ module.exports = function(RED) {
             if (actions.length >= 2) {
                 const oneToLast = actions[actions.length - 2]; // second last action
 
-                if (oneToLast.action === "move_to_position" && oneToLast.name !== "red_cap") {
+                if (oneToLast.action === "move_to_position" && oneToLast.name !== "red_cap" && oneToLast.name !== "green_cap") {
                     const x = parseFloat(oneToLast.position.x_coord);
                     const y = parseFloat(oneToLast.position.y_coord);
                     const z = parseFloat(oneToLast.position.z_coord);

@@ -184,56 +184,57 @@ def split_into_flows(names: List[str]):
     # If leftover without final release → broken mission
     if current:
         flows.append(current)
-    for flow in enumerate(flows):
-        print(f"Flow {flow[0]}: {flow[1]}")
     return initial_block, flows
 
-def compare_flow(given: List[str], template: List[str]):
-    errors = []
+def compare_flow(given: List[str], template: List[str], index):
+    number_to_str = {0: 'first red', 1: 'second red', 2: 'third red', 3: 'first green', 4: 'second green', 5: 'third green'}
+    questions_answers = []
     # --- check length first ---
     if len(given) > len(template):
         if len(set(given)-set(template)) == 1:
-            errors.append({
-                "error": f"There is an additional, unnecessary node. {str(set(given)-set(template)).replace('{', '').replace('}', '')} is additional.",
+            questions_answers.append({
+                "question": f"Why was the {number_to_str[index]} cap dropped not in the bucket?",
+                "answer": f"There is an additional, unnecessary node in {number_to_str[index]} flow. {str(set(given)-set(template)).replace('{', '').replace('}', '')} is additional in {number_to_str[index]} flow.",
             })
         else:
-            errors.append({
-                "error": f"There are additional, unnecessary nodes. {str(set(given)-set(template)).replace('{', '').replace('}', '')} are additional.",
+            questions_answers.append({
+                "question": f"Why was the {number_to_str[index]} cap dropped not in the bucket in {number_to_str[index]} flow?",
+                "answer": f"There are additional, unnecessary nodes. {str(set(given)-set(template)).replace('{', '').replace('}', '')} are additional in {number_to_str[index]} flow.",
             })
     elif len(given) < len(template):
         if len(set(template)-set(given)) == 1:
-            errors.append({
-                "error": f"Node {str(set(template)-set(given)).replace('{', '').replace('}', '')} is missing.",
+            questions_answers.append({
+                "question": f"Why the robot did not pick up the {number_to_str[index]} cap?",
+                "answer": f"Node {str(set(template)-set(given)).replace('{', '').replace('}', '')} is missing in {number_to_str[index]} flow.",
             })
         else:
-            errors.append({
-                "error": f"Nodes {str(set(template)-set(given)).replace('{', '').replace('}', '')} are missing.",
+            questions_answers.append({
+                "question": f"Why the robot did not pick up the {number_to_str[index]} cap?",
+                "answer": f"Nodes {str(set(template)-set(given)).replace('{', '').replace('}', '')} are missing in {number_to_str[index]} flow.",
             })
     given_counter = 0
     for i, expected_action_type in enumerate(template):
         actual = given[given_counter] if given_counter < len(given) else None
-        print(given_counter, i)
-        print(actual, expected_action_type)
         if expected_action_type != actual:
             if given_counter < len(template)-1:
                 if actual == template[given_counter+1]:
-                    errors.append({
-                        "error": f"Node {expected_action_type} is missing at position {i+1}.",
-                        "expected": expected_action_type,
-                        "position": i
+                    questions_answers.append({
+                        "question": f"Why the robot did not place the {number_to_str[index]} cap into the bucket?",
+                        "answer": f"Node {expected_action_type} is missing at position {i+1} in {number_to_str[index]} flow.",
                     })
                     continue
                 else:
-                    errors.append({
-                        "error": f"Node at position {given_counter+1} should be '{expected_action_type}'.",
+                    questions_answers.append({
+                        "question": f"Why the robot did not place the {number_to_str[index]} cap into the bucket?",
+                        "answer": f"Node at position {given_counter+1} should be '{expected_action_type}' in {number_to_str[index]} flow.",
                     })
             else:
-                errors.append({
-                    "error": f"Node at position {given_counter+1} should be '{expected_action_type}'.",
+                questions_answers.append({
+                    "question": f"Why the robot did not place the {number_to_str[index]} cap into the bucket?",
+                    "answer": f"Node at position {given_counter+1} should be '{expected_action_type}' in {number_to_str[index]} flow.",
                 })
         given_counter += 1
-    print(errors)
-    return errors
+    return questions_answers
 
 def validate_mission(names):
     errors = {'additional': []}
@@ -252,17 +253,19 @@ def validate_mission(names):
     # ---------- 3. ensure 6 flows ----------
     if len(flows) < 6:
         errors['additional'].append({
-            "error": "One flow is missing, ensure all 6 caps are handled.",
+            "question": "Why there is one cap left on the table?",
+            "answer": "One flow is missing, ensure all 6 caps are handled.",
         })
         # still allow partial compare
 
     # ---------- 4. compare each flow to template ----------
     for i, flow in enumerate(flows):
+        print("i, flow", i, flow)
         if i <= 2:
             flow_template = RED_FLOW_TEMPLATE
         else:
             flow_template = GREEN_FLOW_TEMPLATE
-        flow_errors = compare_flow(flow, flow_template)
+        flow_errors = compare_flow(flow, flow_template, i)
         if flow_errors:
             errors[i] = flow_errors
 

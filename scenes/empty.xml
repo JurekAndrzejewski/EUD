@@ -1,21 +1,23 @@
 <mujoco model="empty">
-	<compiler angle="radian" meshdir="assets" autolimits="true"/>
-	<option timestep="0.005" gravity="0 0 -9.81" integrator="implicitfast"
+    <compiler angle="radian" meshdir="assets" autolimits="true"/>
+    <option timestep="0.005" gravity="0 0 -9.81" integrator="implicitfast"
             viscosity="0.1" iterations="50" ls_iterations="10" cone="pyramidal"/>
-	<visual>
-		<headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3"/>
-		<global azimuth="120" elevation="-30"/>
-	</visual>
+
+    <visual>
+        <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3"/>
+        <global azimuth="120" elevation="-20"/>
+    </visual>
 	<asset>
-		<texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512"/>
-		<texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300"/>
-		<material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+        <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512"/>
+        <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4"
+                 rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300"/>
+        <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
 		<mesh name="red_cap_mesh" file="meshes/red_cap.stl" scale="0.15 0.15 0.4"/>
 		<mesh name="green_cap_mesh" file="meshes/green_cap.stl" scale="0.15 0.15 0.4"/>
 	</asset>
 	<worldbody>
-		<light pos="0 0 2" dir="0 0 -1" directional="true"/>
-		<geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
+        <light pos="0 0 2" dir="0 0 -1" directional="true"/>
+        <geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
 		<body name="red_cap1" pos="-0.4 0 0.565">
 			<freejoint/>
 			<geom name="red_cap_visual1" type="mesh" mesh="red_cap_mesh" contype="1" conaffinity="1" rgba="1 0 0 1" pos="0.05 0.05 -0.0125" friction="1 0.2 0.02"/>

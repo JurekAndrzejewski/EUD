@@ -27,7 +27,7 @@ def init() -> tuple[mj.MjModel, mj.MjData]:
     """
     # Load empty scene as base
     spec = mj.MjSpec().from_file((_HERE / "scenes/empty.xml").as_posix())
-
+    #model = mj.MjModel.from_xml_path((_HERE / "scenes/empty.xml").as_posix())
     # Load robot arm and gripper descriptions
     arm = mj.MjSpec().from_file(ur5e_mj_description.MJCF_PATH)
     gripper = mj.MjSpec().from_file(robotiq_2f85_mj_description.MJCF_PATH)
@@ -157,8 +157,7 @@ def init() -> tuple[mj.MjModel, mj.MjData]:
 
 # Initialize the simulation
 model, data = init()
-print(model, data)
-print(model.opt.timestep)
+
 
 # Robot configuration
 # Home position: joints at specific angles (in radians) for "home" pose

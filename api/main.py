@@ -14,6 +14,7 @@ from .mission_service import (
 )
 import sys
 from pathlib import Path
+import requests
 
 # Add parent directory to import robot_api
 sys.path.append(str(Path(__file__).parent.parent))
@@ -35,24 +36,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-LATEST_QUESTIONS = {}   # Always overwrite when missions run = {}
-QUESTIONS = [[
-    "Why the robot did not pick up the {} cap?",
-    #Grasp node is missing
-    "Why the robot did not place the {} cap into the bucket?",
-    #There is additional node
-    "Why there is one cap left on the table?",
-    ],
-    [                
-        "Why was {} cap placed in the wrong bucket?",
-        #Wrong bucket name
-    ],
-    [
-        "Why was {} cap dropped not in the bucket?",
-        #Additional node
-        "Why was {} cap released prematurely?"
-    ]
-]
+LATEST_QUESTIONS = {}
 
 def validate(actions):
     names = []
@@ -61,26 +45,19 @@ def validate(actions):
 
     return validate_mission(names)
 
-def generate_questions(flows, mission_id):
-    number_to_str = {0: 'first red', 1: 'second red', 2: 'third red', 3: 'first green', 4: 'second green', 5: 'third green'}
-    all_qa = {}
-    for flow_number in flows.keys():
-        flow = flows[flow_number]
-        if flow_number != 'additional':
-            all_questions = QUESTIONS[mission_id-1]
-            if mission_id == 1:
-                flow.append({"error": "Verify that all three red cap blocks exist in order: move -> grasp -> move to bucket -> release. Missing or misplaced blocks will cause skipping."})
-            for i, question in enumerate(all_questions):
-                print(question.format(number_to_str[flow_number]))
-                all_qa[question.format(number_to_str[flow_number])] = flow[i]["error"]
-        else:
-            if flow != []:
-                all_qa['Why there is one cap left on the table?'] = flow[0]["error"]
-    return all_qa
-
 @app.get("/questions")
 async def get_questions():
-    return LATEST_QUESTIONS
+    return_dict = {}
+    global LATEST_QUESTIONS
+    for key in LATEST_QUESTIONS:
+        for q_a in LATEST_QUESTIONS[key]:
+            return_dict[q_a['question']] = q_a['answer']
+    return return_dict
+
+@app.get("/clear_questions")
+async def clear_questions():
+    LATEST_QUESTIONS = {}
+    return {}
 
 @app.post("/missions", response_model=MissionsResponse, tags=["Mission Control"])
 async def execute_missions(batch: MissionsRequest):
@@ -92,12 +69,12 @@ async def execute_missions(batch: MissionsRequest):
     LATEST_QUESTIONS = {}
     results: list[MissionResponse] = []
     for mission in batch.missions:
+        #x=''
         res = await execute_mission(mission)
         results.append(res)
 
     overall_status = "success" if all(r.status == "success" for r in results) else "error"
-    flows = validate(batch.missions[0].actions)
-    generated = generate_questions(flows, int(batch.missions[0].mission_id))
+    generated = validate(batch.missions[0].actions)
     LATEST_QUESTIONS = generated
     return MissionsResponse(status=overall_status, results=results)
 
