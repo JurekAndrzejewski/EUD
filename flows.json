@@ -43,7 +43,6 @@
         "id": "9eb5dc55519d3d3f",
         "type": "initialize",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 220,
         "y": 40,
         "wires": [
@@ -80,7 +79,6 @@
         "id": "fc4cdb7e6ff8fcc6",
         "type": "finish",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 1210,
         "y": 340,
         "wires": [
@@ -91,7 +89,6 @@
         "id": "1983db9376161d8d",
         "type": "reset boxes",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 370,
         "y": 40,
         "wires": [
@@ -104,7 +101,6 @@
         "id": "538e789547bf3126",
         "type": "move to red cap 1",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 550,
         "y": 40,
         "wires": [
@@ -117,7 +113,6 @@
         "id": "75012e9d4ca8a113",
         "type": "grasp",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 730,
         "y": 40,
         "wires": [
@@ -130,7 +125,6 @@
         "id": "a973b5cc1fbbac8e",
         "type": "release",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 1080,
         "y": 40,
         "wires": [
@@ -143,7 +137,6 @@
         "id": "8ccb868ed11a7120",
         "type": "move to red bucket",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 890,
         "y": 40,
         "wires": [
@@ -156,7 +149,6 @@
         "id": "304d71ad52f079d9",
         "type": "release",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 1080,
         "y": 100,
         "wires": [
@@ -169,7 +161,6 @@
         "id": "971ecd8b7442e529",
         "type": "move to red bucket",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 890,
         "y": 100,
         "wires": [
@@ -182,7 +173,6 @@
         "id": "b153db0d0f5c6f3b",
         "type": "move to red cap 2",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 550,
         "y": 100,
         "wires": [
@@ -195,7 +185,6 @@
         "id": "4194d4f430105c8b",
         "type": "move to red cap 3",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 550,
         "y": 160,
         "wires": [
@@ -208,7 +197,6 @@
         "id": "eeb7dcd2934e5797",
         "type": "move to green cap 1",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 560,
         "y": 220,
         "wires": [
@@ -221,7 +209,6 @@
         "id": "3837b941bf5b25cd",
         "type": "move to green cap 2",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 560,
         "y": 280,
         "wires": [
@@ -234,7 +221,6 @@
         "id": "bf2f038b42b6ec8b",
         "type": "move to green cap 3",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 560,
         "y": 340,
         "wires": [
@@ -247,7 +233,6 @@
         "id": "5f16a97abe91a75b",
         "type": "grasp",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 730,
         "y": 160,
         "wires": [
@@ -260,7 +245,6 @@
         "id": "eee568402c512a88",
         "type": "release",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 1080,
         "y": 160,
         "wires": [
@@ -273,7 +257,6 @@
         "id": "232111ddf716c255",
         "type": "move to red bucket",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 890,
         "y": 160,
         "wires": [
@@ -286,7 +269,6 @@
         "id": "0b06c01f026876af",
         "type": "grasp",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 730,
         "y": 220,
         "wires": [
@@ -299,7 +281,6 @@
         "id": "123f949c609b71c8",
         "type": "release",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 1080,
         "y": 220,
         "wires": [
@@ -312,7 +293,6 @@
         "id": "7f1252784bc4fde1",
         "type": "grasp",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 730,
         "y": 280,
         "wires": [
@@ -325,7 +305,6 @@
         "id": "a0f719228ab7bb2f",
         "type": "release",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 1080,
         "y": 280,
         "wires": [
@@ -338,7 +317,6 @@
         "id": "4450dda1547c5165",
         "type": "grasp",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 730,
         "y": 340,
         "wires": [
@@ -351,7 +329,6 @@
         "id": "fe505b45b5877433",
         "type": "release",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 1080,
         "y": 340,
         "wires": [
@@ -364,7 +341,6 @@
         "id": "c8aa19a5f5192117",
         "type": "move to green bucket",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 900,
         "y": 220,
         "wires": [
@@ -377,7 +353,6 @@
         "id": "c84c36e77f824ac9",
         "type": "move to green bucket",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 900,
         "y": 280,
         "wires": [
@@ -390,7 +365,6 @@
         "id": "e0cd7a29f7b57df8",
         "type": "move to green bucket",
         "z": "d103939ecea1f50a",
-        "name": "",
         "x": 900,
         "y": 340,
         "wires": [
@@ -400,59 +374,9 @@
         ]
     },
     {
-        "id": "96913925966ae7a7",
-        "type": "http in",
-        "z": "d103939ecea1f50a",
-        "name": "run case 1",
-        "url": "/case1",
-        "method": "get",
-        "upload": false,
-        "skipBodyParsing": false,
-        "swaggerDoc": "",
-        "x": 100,
-        "y": 180,
-        "wires": [
-            [
-                "9eb5dc55519d3d3f",
-                "f557dcf18226a95e"
-            ]
-        ]
-    },
-    {
-        "id": "f557dcf18226a95e",
-        "type": "template",
-        "z": "d103939ecea1f50a",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "Simulation executed",
-        "output": "str",
-        "x": 100,
-        "y": 240,
-        "wires": [
-            [
-                "8943983394ef9d33"
-            ]
-        ]
-    },
-    {
-        "id": "8943983394ef9d33",
-        "type": "http response",
-        "z": "d103939ecea1f50a",
-        "name": "response",
-        "statusCode": "200",
-        "headers": {},
-        "x": 120,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "06bd2c3bfd8af3cc",
         "type": "initialize",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 220,
         "y": 40,
         "wires": [
@@ -489,7 +413,6 @@
         "id": "e993373edf3b49bf",
         "type": "finish",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 1250,
         "y": 340,
         "wires": [
@@ -500,7 +423,6 @@
         "id": "149b9d885f2a855c",
         "type": "reset boxes",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 370,
         "y": 40,
         "wires": [
@@ -513,7 +435,6 @@
         "id": "fa7e5cb2111a85f4",
         "type": "move to red cap 1",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 550,
         "y": 40,
         "wires": [
@@ -526,7 +447,6 @@
         "id": "185f06ce07e41e46",
         "type": "grasp",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 730,
         "y": 40,
         "wires": [
@@ -539,7 +459,6 @@
         "id": "8cc4fa55cace67f7",
         "type": "release",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 1080,
         "y": 40,
         "wires": [
@@ -552,7 +471,6 @@
         "id": "c0149c6062f2cc32",
         "type": "move to red bucket",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 890,
         "y": 40,
         "wires": [
@@ -562,28 +480,14 @@
         ]
     },
     {
-        "id": "324c5340dc0dfb15",
-        "type": "grasp",
-        "z": "aeae891cb14daa67",
-        "name": "",
-        "x": 730,
-        "y": 100,
-        "wires": [
-            [
-                "cd36d4c387e4ccfe"
-            ]
-        ]
-    },
-    {
         "id": "f88778b80e6c4503",
         "type": "release",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 1080,
         "y": 100,
         "wires": [
             [
-                "52e8f866bcae20a2"
+                "f8842ded3f8cb756"
             ]
         ]
     },
@@ -591,12 +495,11 @@
         "id": "2c68e6d49a8aacbe",
         "type": "move to red cap 2",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 550,
         "y": 100,
         "wires": [
             [
-                "324c5340dc0dfb15"
+                "30c735d9eb9876a1"
             ]
         ]
     },
@@ -604,7 +507,6 @@
         "id": "6fb9d477932b8ede",
         "type": "move to green cap 1",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 560,
         "y": 220,
         "wires": [
@@ -617,12 +519,11 @@
         "id": "a5d6d925ae2f9498",
         "type": "move to green cap 2",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 560,
         "y": 280,
         "wires": [
             [
-                "9fb64cef15c30de4"
+                "9399816411aae195"
             ]
         ]
     },
@@ -630,7 +531,6 @@
         "id": "d9e96f69ca500a1d",
         "type": "move to green cap 3",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 560,
         "y": 340,
         "wires": [
@@ -643,7 +543,6 @@
         "id": "bebe20b58255a150",
         "type": "grasp",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 730,
         "y": 160,
         "wires": [
@@ -656,7 +555,6 @@
         "id": "b43056c1d33ddf62",
         "type": "release",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 1080,
         "y": 160,
         "wires": [
@@ -669,7 +567,6 @@
         "id": "9de1b359460a3067",
         "type": "move to red bucket",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 890,
         "y": 160,
         "wires": [
@@ -682,7 +579,6 @@
         "id": "b3e68c784993c42a",
         "type": "grasp",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 730,
         "y": 220,
         "wires": [
@@ -695,7 +591,6 @@
         "id": "26621fa9bd7fa416",
         "type": "release",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 1080,
         "y": 220,
         "wires": [
@@ -705,23 +600,9 @@
         ]
     },
     {
-        "id": "9fb64cef15c30de4",
-        "type": "grasp",
-        "z": "aeae891cb14daa67",
-        "name": "",
-        "x": 730,
-        "y": 280,
-        "wires": [
-            [
-                "9399816411aae195"
-            ]
-        ]
-    },
-    {
         "id": "82161717cadd28cd",
         "type": "release",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 1080,
         "y": 280,
         "wires": [
@@ -734,7 +615,6 @@
         "id": "2008a71a333bbc6e",
         "type": "grasp",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 730,
         "y": 340,
         "wires": [
@@ -747,7 +627,6 @@
         "id": "b253b6e19a04d7fe",
         "type": "release",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 1080,
         "y": 340,
         "wires": [
@@ -758,7 +637,6 @@
         "id": "9399816411aae195",
         "type": "move to green bucket",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 900,
         "y": 280,
         "wires": [
@@ -771,7 +649,6 @@
         "id": "9dc25ae0fc91a64a",
         "type": "move to green bucket",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 900,
         "y": 340,
         "wires": [
@@ -784,7 +661,6 @@
         "id": "d9264ac370abd197",
         "type": "move to red bucket",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 890,
         "y": 220,
         "wires": [
@@ -794,23 +670,21 @@
         ]
     },
     {
-        "id": "cd36d4c387e4ccfe",
-        "type": "move to green bucket",
+        "id": "30c735d9eb9876a1",
+        "type": "grasp",
         "z": "aeae891cb14daa67",
-        "name": "",
-        "x": 900,
+        "x": 730,
         "y": 100,
         "wires": [
             [
-                "f88778b80e6c4503"
+                "337ab1746cf9ead0"
             ]
         ]
     },
     {
-        "id": "52e8f866bcae20a2",
-        "type": "move to red cap 2",
+        "id": "f8842ded3f8cb756",
+        "type": "move to red cap 3",
         "z": "aeae891cb14daa67",
-        "name": "",
         "x": 550,
         "y": 160,
         "wires": [
@@ -820,10 +694,21 @@
         ]
     },
     {
+        "id": "337ab1746cf9ead0",
+        "type": "move to red bucket",
+        "z": "aeae891cb14daa67",
+        "x": 890,
+        "y": 100,
+        "wires": [
+            [
+                "f88778b80e6c4503"
+            ]
+        ]
+    },
+    {
         "id": "dcb9be069d26f35e",
         "type": "initialize",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 220,
         "y": 40,
         "wires": [
@@ -860,7 +745,6 @@
         "id": "c258883707d1e531",
         "type": "finish",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 1210,
         "y": 340,
         "wires": [
@@ -871,7 +755,6 @@
         "id": "401f3ad11cf7b1c0",
         "type": "reset boxes",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 370,
         "y": 40,
         "wires": [
@@ -884,7 +767,6 @@
         "id": "3b6f3fb5af0e028a",
         "type": "move to red cap 1",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 550,
         "y": 40,
         "wires": [
@@ -897,7 +779,6 @@
         "id": "d00cd3b860ecf9ba",
         "type": "grasp",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 730,
         "y": 40,
         "wires": [
@@ -910,7 +791,6 @@
         "id": "f3e18da0216e609b",
         "type": "move to red bucket",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 890,
         "y": 40,
         "wires": [
@@ -923,7 +803,6 @@
         "id": "ba6ceea945ef6dd7",
         "type": "grasp",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 730,
         "y": 100,
         "wires": [
@@ -936,8 +815,7 @@
         "id": "0b828aab7c04a83c",
         "type": "release",
         "z": "bb817356ff2a4ad9",
-        "name": "",
-        "x": 1060,
+        "x": 1080,
         "y": 100,
         "wires": [
             [
@@ -949,7 +827,6 @@
         "id": "60d64ada4dfec140",
         "type": "move to red bucket",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 890,
         "y": 100,
         "wires": [
@@ -962,7 +839,6 @@
         "id": "cab7903626835b75",
         "type": "move to red cap 2",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 550,
         "y": 100,
         "wires": [
@@ -975,7 +851,6 @@
         "id": "1fc943c468f70c3e",
         "type": "move to red cap 3",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 550,
         "y": 160,
         "wires": [
@@ -988,7 +863,6 @@
         "id": "2dabd39eb1fc5ddf",
         "type": "move to green cap 1",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 560,
         "y": 220,
         "wires": [
@@ -1001,7 +875,6 @@
         "id": "cb91071f5d8dd223",
         "type": "move to green cap 2",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 560,
         "y": 280,
         "wires": [
@@ -1014,7 +887,6 @@
         "id": "41af6a0f84a49841",
         "type": "move to green cap 3",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 560,
         "y": 340,
         "wires": [
@@ -1027,7 +899,6 @@
         "id": "1e0d9686ab9fca09",
         "type": "grasp",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 730,
         "y": 160,
         "wires": [
@@ -1040,7 +911,6 @@
         "id": "cd5a4f1199ee59a8",
         "type": "release",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 1080,
         "y": 160,
         "wires": [
@@ -1053,7 +923,6 @@
         "id": "13832dab6a241639",
         "type": "move to red bucket",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 890,
         "y": 160,
         "wires": [
@@ -1066,7 +935,6 @@
         "id": "a40ab726fce4217d",
         "type": "grasp",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 730,
         "y": 220,
         "wires": [
@@ -1079,7 +947,6 @@
         "id": "0902afe5cf025ef8",
         "type": "release",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 1080,
         "y": 220,
         "wires": [
@@ -1092,7 +959,6 @@
         "id": "6737d06bde63f48c",
         "type": "grasp",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 730,
         "y": 280,
         "wires": [
@@ -1105,7 +971,6 @@
         "id": "f5f458a78115a581",
         "type": "release",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 1080,
         "y": 280,
         "wires": [
@@ -1118,7 +983,6 @@
         "id": "17ca27106e884710",
         "type": "grasp",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 730,
         "y": 340,
         "wires": [
@@ -1131,7 +995,6 @@
         "id": "85d3c77516e4b5e2",
         "type": "release",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 1080,
         "y": 340,
         "wires": [
@@ -1144,7 +1007,6 @@
         "id": "a582b4361136a71f",
         "type": "move to green bucket",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 900,
         "y": 220,
         "wires": [
@@ -1157,7 +1019,6 @@
         "id": "ae8a5baf5a55aa1e",
         "type": "move to green bucket",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 900,
         "y": 280,
         "wires": [
@@ -1170,7 +1031,6 @@
         "id": "5a6f65591a919813",
         "type": "move to green bucket",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 900,
         "y": 340,
         "wires": [
@@ -1183,7 +1043,6 @@
         "id": "fe66d5df2110cdda",
         "type": "move to position",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x_coord": "0.5",
         "y_coord": "0.5",
         "z_coord": "0.9",
@@ -1200,7 +1059,6 @@
         "id": "8241d477faba3104",
         "type": "release",
         "z": "bb817356ff2a4ad9",
-        "name": "",
         "x": 1240,
         "y": 40,
         "wires": [
@@ -1213,7 +1071,6 @@
         "id": "6c21c5915cda8128",
         "type": "initialize",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 220,
         "y": 40,
         "wires": [
@@ -1250,7 +1107,6 @@
         "id": "0da0ace468a8104e",
         "type": "finish",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 1210,
         "y": 340,
         "wires": [
@@ -1261,7 +1117,6 @@
         "id": "034f339babb66042",
         "type": "reset boxes",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 370,
         "y": 40,
         "wires": [
@@ -1274,7 +1129,6 @@
         "id": "e514c7d11046002c",
         "type": "move to red cap 1",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 550,
         "y": 40,
         "wires": [
@@ -1287,7 +1141,6 @@
         "id": "6fe90a971982cac7",
         "type": "grasp",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 730,
         "y": 40,
         "wires": [
@@ -1300,7 +1153,6 @@
         "id": "51ad7b320e668263",
         "type": "release",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 1080,
         "y": 40,
         "wires": [
@@ -1313,7 +1165,6 @@
         "id": "e58096e03d91c182",
         "type": "move to red bucket",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 890,
         "y": 40,
         "wires": [
@@ -1326,7 +1177,6 @@
         "id": "fd1b674f8f565a88",
         "type": "grasp",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 730,
         "y": 100,
         "wires": [
@@ -1339,7 +1189,6 @@
         "id": "2a5b500c4af6184e",
         "type": "release",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 1080,
         "y": 100,
         "wires": [
@@ -1352,7 +1201,6 @@
         "id": "d7bc4242113c5ef5",
         "type": "move to red bucket",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 890,
         "y": 100,
         "wires": [
@@ -1365,7 +1213,6 @@
         "id": "719b941d6779a236",
         "type": "move to red cap 2",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 550,
         "y": 100,
         "wires": [
@@ -1378,7 +1225,6 @@
         "id": "a4daf85784ae9e71",
         "type": "move to red cap 3",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 550,
         "y": 160,
         "wires": [
@@ -1391,7 +1237,6 @@
         "id": "0a694db2d23d5128",
         "type": "move to green cap 1",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 560,
         "y": 220,
         "wires": [
@@ -1404,7 +1249,6 @@
         "id": "02553b146690bdfe",
         "type": "move to green cap 2",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 560,
         "y": 280,
         "wires": [
@@ -1417,7 +1261,6 @@
         "id": "836f0616918c962d",
         "type": "move to green cap 3",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 560,
         "y": 340,
         "wires": [
@@ -1430,7 +1273,6 @@
         "id": "68206b74157d2124",
         "type": "grasp",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 730,
         "y": 160,
         "wires": [
@@ -1443,7 +1285,6 @@
         "id": "02476c4b18f311c7",
         "type": "release",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 1080,
         "y": 160,
         "wires": [
@@ -1456,7 +1297,6 @@
         "id": "75fdb1b65f0c00f6",
         "type": "move to red bucket",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 890,
         "y": 160,
         "wires": [
@@ -1469,7 +1309,6 @@
         "id": "4ede5e75acccb1bd",
         "type": "grasp",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 730,
         "y": 220,
         "wires": [
@@ -1482,7 +1321,6 @@
         "id": "11a7ce68a35ac59c",
         "type": "release",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 1080,
         "y": 220,
         "wires": [
@@ -1495,7 +1333,6 @@
         "id": "3142ae659bcf2dc8",
         "type": "grasp",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 730,
         "y": 280,
         "wires": [
@@ -1508,7 +1345,6 @@
         "id": "c0977e7ed6e15831",
         "type": "release",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 1080,
         "y": 280,
         "wires": [
@@ -1521,7 +1357,6 @@
         "id": "108340e22537eb57",
         "type": "grasp",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 730,
         "y": 340,
         "wires": [
@@ -1534,7 +1369,6 @@
         "id": "15e4f8f88da0980e",
         "type": "release",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 1080,
         "y": 340,
         "wires": [
@@ -1547,7 +1381,6 @@
         "id": "0d426fe2ea98067a",
         "type": "move to green bucket",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 900,
         "y": 220,
         "wires": [
@@ -1560,7 +1393,6 @@
         "id": "981fbe12158fb639",
         "type": "move to green bucket",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 900,
         "y": 280,
         "wires": [
@@ -1573,7 +1405,6 @@
         "id": "735d36181e7c8196",
         "type": "move to green bucket",
         "z": "86712ada2b143685",
-        "name": "",
         "x": 900,
         "y": 340,
         "wires": [

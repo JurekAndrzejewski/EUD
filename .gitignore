@@ -2,3 +2,4 @@ venv
 *.pyc
 MUJOCO_LOG.TXT
 test.py
+venv312
