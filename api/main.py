@@ -70,9 +70,8 @@ async def execute_missions(batch: MissionsRequest):
     LATEST_QUESTIONS = []
     results: list[MissionResponse] = []
     for mission in batch.missions:
-        x=''
-        #res = await execute_mission(mission)
-        #results.append(res)
+        res = await execute_mission(mission)
+        results.append(res)
 
     overall_status = "success" if all(r.status == "success" for r in results) else "error"
     generated = validate(batch.missions[0].actions)

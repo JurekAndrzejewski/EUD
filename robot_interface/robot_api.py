@@ -573,10 +573,10 @@ class RobotAPI:
             with self.data_lock:
                 _reset_free_body("red_cap1", [-0.4125, 0.325, 0.56125])
                 _reset_free_body("green_cap1", [0.4125, 0.325, 0.565125])
-                _reset_free_body("red_cap2", [-0.4125, 0.125, 0.56125])
-                _reset_free_body("green_cap2", [0.4125, 0.125, 0.565125])
-                _reset_free_body("red_cap3", [-0.4125, -0.125, 0.56125])
-                _reset_free_body("green_cap3", [0.4125, -0.125, 0.565125])
+                #_reset_free_body("red_cap2", [-0.4125, 0.125, 0.56125])
+                #_reset_free_body("green_cap2", [0.4125, 0.125, 0.565125])
+                #_reset_free_body("red_cap3", [-0.4125, -0.125, 0.56125])
+                #_reset_free_body("green_cap3", [0.4125, -0.125, 0.565125])
                 # Recompute all dependent quantities
                 mujoco.mj_forward(self.model, self.data)
 
