@@ -19,11 +19,7 @@
       "move-to-red-bucket": "move-to-red-bucket.js",
       "move-to-green-bucket": "move-to-green-bucket.js",
       "move-to-red-cap1": "move-to-red-cap1.js",
-      "move-to-red-cap2": "move-to-red-cap2.js",
-      "move-to-red-cap3": "move-to-red-cap3.js",
-      "move-to-green-cap1": "move-to-green-cap1.js",
-      "move-to-green-cap2": "move-to-green-cap2.js",
-      "move-to-green-cap3": "move-to-green-cap3.js"
+      "move-to-green-cap1": "move-to-green-cap1.js"
     }
   }
 }

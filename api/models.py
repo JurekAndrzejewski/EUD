@@ -187,9 +187,10 @@ def split_into_flows(names: List[str]):
     return initial_block, flows
 
 def compare_flow(given: List[str], template: List[str], index):
-    number_to_str = {0: 'first red', 1: 'second red', 2: 'third red', 3: 'first green', 4: 'second green', 5: 'third green'}
+    number_to_str = {0: 'first red', 1: 'first green'}
     questions_answers = []
     # --- check length first ---
+    print(given, template)
     if len(given) > len(template):
         if len(set(given)-set(template)) == 1:
             questions_answers.append({
@@ -210,7 +211,7 @@ def compare_flow(given: List[str], template: List[str], index):
         else:
             questions_answers.append({
                 "question": f"Why the robot did not pick up the {number_to_str[index]} cap?",
-                "answer": f"Nodes {str(set(template)-set(given)).replace('{', '').replace('}', '')} are missing in {number_to_str[index]} flow.",
+                "answer": f"Nodes {str(sorted(set(template)-set(given))).replace('[', '').replace(']', '')} are missing in {number_to_str[index]} flow.",
             })
     given_counter = 0
     for i, expected_action_type in enumerate(template):
@@ -226,14 +227,15 @@ def compare_flow(given: List[str], template: List[str], index):
                 else:
                     questions_answers.append({
                         "question": f"Why the robot did not place the {number_to_str[index]} cap into the bucket?",
-                        "answer": f"Node at position {given_counter+1} should be '{expected_action_type}' in {number_to_str[index]} flow.",
+                        "answer": f"Node at position {given_counter+1} should be '{expected_action_type}' instead of '{actual}' in {number_to_str[index]} flow.",
                     })
             else:
                 questions_answers.append({
                     "question": f"Why the robot did not place the {number_to_str[index]} cap into the bucket?",
-                    "answer": f"Node at position {given_counter+1} should be '{expected_action_type}' in {number_to_str[index]} flow.",
+                    "answer": f"Node at position {given_counter+1} should be '{expected_action_type}' instead of '{actual}' in {number_to_str[index]} flow.",
                 })
         given_counter += 1
+        print(questions_answers)
     return questions_answers
 
 def validate_mission(names):
@@ -251,7 +253,7 @@ def validate_mission(names):
         })
 
     # ---------- 3. ensure 6 flows ----------
-    if len(flows) < 6:
+    if len(flows) < 2:
         errors['additional'].append({
             "question": "Why there is one cap left on the table?",
             "answer": "One flow is missing, ensure all 6 caps are handled.",
@@ -261,7 +263,7 @@ def validate_mission(names):
     # ---------- 4. compare each flow to template ----------
     for i, flow in enumerate(flows):
         print("i, flow", i, flow)
-        if i <= 2:
+        if i == 0:
             flow_template = RED_FLOW_TEMPLATE
         else:
             flow_template = GREEN_FLOW_TEMPLATE

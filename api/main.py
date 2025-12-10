@@ -36,7 +36,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-LATEST_QUESTIONS = {}
+LATEST_QUESTIONS = []
 
 def validate(actions):
     names = []
@@ -47,17 +47,18 @@ def validate(actions):
 
 @app.get("/questions")
 async def get_questions():
-    return_dict = {}
     global LATEST_QUESTIONS
+    to_return = []
     for key in LATEST_QUESTIONS:
-        for q_a in LATEST_QUESTIONS[key]:
-            return_dict[q_a['question']] = q_a['answer']
-    return return_dict
+        to_return += LATEST_QUESTIONS[key]
+    print(to_return)
+    return to_return
 
 @app.get("/clear_questions")
-async def clear_questions():
-    LATEST_QUESTIONS = {}
-    return {}
+def clear_questions():
+    global LATEST_QUESTIONS
+    LATEST_QUESTIONS = []
+    return []
 
 @app.post("/missions", response_model=MissionsResponse, tags=["Mission Control"])
 async def execute_missions(batch: MissionsRequest):
@@ -66,12 +67,12 @@ async def execute_missions(batch: MissionsRequest):
     Returns a per-mission result list.
     """
     global LATEST_QUESTIONS
-    LATEST_QUESTIONS = {}
+    LATEST_QUESTIONS = []
     results: list[MissionResponse] = []
     for mission in batch.missions:
-        #x=''
-        res = await execute_mission(mission)
-        results.append(res)
+        x=''
+        #res = await execute_mission(mission)
+        #results.append(res)
 
     overall_status = "success" if all(r.status == "success" for r in results) else "error"
     generated = validate(batch.missions[0].actions)
