@@ -256,7 +256,7 @@ def validate_mission(names):
     if len(flows) < 2:
         errors['additional'].append({
             "question": "Why there is one cap left on the table?",
-            "answer": "One flow is missing, ensure all 6 caps are handled.",
+            "answer": "One flow is missing, ensure both caps are handled.",
         })
         # still allow partial compare
 
