@@ -187,7 +187,7 @@ def split_into_flows(names: List[str]):
     return initial_block, flows
 
 def compare_flow(given: List[str], template: List[str], index):
-    number_to_str = {0: 'first red', 1: 'first green'}
+    number_to_str = {0: 'first', 1: 'second'}
     questions_answers = []
     # --- check length first ---
     print(given, template)
